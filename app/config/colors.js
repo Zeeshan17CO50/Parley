@@ -1,6 +1,3 @@
-// https://flaviocopes.com/rgb-color-codes/
-// https://imagecolorpicker.com/en
-
 export default {
     primary: "#5dc4e5",
     secondary: "#5c91f1",
