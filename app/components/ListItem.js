@@ -2,16 +2,17 @@ import React from 'react';
 import { Image, StyleSheet, View, TouchableHighlight } from 'react-native';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 
-import color from '../config/color';
+
+import colors from '../config/colors';
 import AppText from './AppText';
 
-function ListItem({title, subTitle, image, IconComponent, onPress, renderRightActions}) {
+function ListItem({title, subTitle, image, backgroundColor='#fff', IconComponent, onPress, renderRightActions}) {
     return (
         <Swipeable renderRightActions={renderRightActions}>
             <TouchableHighlight 
-                underlayColor={color.light} 
+                underlayColor={colors.light} 
                 onPress={onPress}>
-                    <View style={styles.container}>
+                    <View style={[styles.container, {backgroundColor}]}>
                         {IconComponent}
                         {image && <Image style={styles.image} source={image} />}
                         <View style={styles.detailsContainer}>
@@ -26,24 +27,24 @@ function ListItem({title, subTitle, image, IconComponent, onPress, renderRightAc
 
 const styles = StyleSheet.create({
     container:{
+        backgroundColor: colors.white,
         flexDirection: 'row',
         padding: 15,
-        backgroundColor: color.white,
     },
     detailsContainer:{
-        marginLeft: 10,
         justifyContent: 'center',
+        marginLeft: 10,
     },
     image:{
-        width: 70,
-        height: 70,
         borderRadius: 35,
+        height: 70,
+        width: 70,
     },
     subTitle:{
-        color: color.medium
+        color: colors.gray,
     },
     title:{
-        fontWeight: '500'
+        fontWeight: '500',
     },
 })
 
