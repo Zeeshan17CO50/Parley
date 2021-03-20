@@ -1,13 +1,11 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 
-import AppScreen from "../components/AppScreen";
-import AppListItemDeleteAction from "../components/AppListItemDeleteAction";
-import ListItem from "../components/ListItem";
 import colors from "../config/colors";
 import Icon from "../components/Icon";
+import AppScreen from "../components/AppScreen";
 
-function UserProfile(props) {
+function EditScreen(props) {
   return (
     <AppScreen>
       <View style={styles.container}>
@@ -19,17 +17,6 @@ function UserProfile(props) {
           style={styles.icon}
         />
       </View>
-      <View style={styles.container1}>
-        <ListItem
-          backgroundColor={colors.white}
-          title="Zeeshan Siddique"
-          subTitle="India"
-          image={require("../assets/abdul.jpg")}
-          renderRightActions={() => (
-            <AppListItemDeleteAction onPress={() => console.log("Delete")} />
-          )}
-        />
-      </View>
     </AppScreen>
   );
 }
@@ -38,9 +25,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 0.4,
     overflow: "hidden",
-  },
-  container1: {
-    flex: 0.5,
   },
   icon: {
     margin: 20,
@@ -52,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default UserProfile;
+export default EditScreen;
