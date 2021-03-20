@@ -6,7 +6,6 @@ import { StyleSheet, Text, View } from "react-native";
 import AppButton from "./app/components/AppButton";
 import AppText from "./app/components/AppText";
 import UserProfile from "./app/screen/UserProfile";
-import VideoCamera from "./app/screen/VideoCamera";
 
 export default function App() {
   return (
@@ -16,7 +15,7 @@ export default function App() {
     //   <AppButton title="Record" onPress={()=>console.log("Record starting...")} width={200} color="secondary"/>
     //   <StatusBar style="auto" />
     // </View>
-    <VideoCamera/>
+    <UserProfile/>
   );
 }
 
